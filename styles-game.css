@@ -1,0 +1,160 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.game-page {
+    width: 100vw;
+    height: 100vh;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header-container button {
+    background-color: white;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.header-container button img {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+
+.header-container button:hover {
+    background-color: #07B1A1;
+}
+
+.header-container h2 {
+    font-family: 'Play', sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-left: 180px;
+    margin-right: 180px;
+}
+
+.header-container p {
+    font-family: 'Play', sans-serif;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    background-color: white;
+    border-radius: 5px;
+    border: 5px solid;
+    border-color: black;
+    padding: 5px;
+}
+
+.header-container span {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.board-container {
+    width: 60vw;
+    height: 70vh;
+    background-color: #274c43;
+    border: 20px solid;
+    border-color: #bc752e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.board-first-row,
+.board-second-row,
+.board-third-row,
+.board-fourth-row {
+    width: 100%;
+    height: 20%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.board-first-row {
+    margin-top: 5px;
+}
+
+.board-fourth-row {
+    margin-bottom: 5px;
+}
+
+.card {
+    cursor: pointer;
+    width: 15%;
+    height: 90%;
+    background-color: white;
+    border: 3px solid;
+    border-color: black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 800px;
+    transition: transform 1s;
+}
+
+.board-container img {
+    width: 60px;
+    height: 60px;
+}
+
+.front {
+    font-size: 2rem;
+    font-family: 'Play', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.back {
+    width: 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.card.open {
+    transform: rotateY(180deg);
+}
+
+
+.game-page footer button {
+    text-transform: uppercase;
+    font-family: 'Play', sans-serif;
+    font-size: 1.25rem;
+    background-color: white;
+    border-radius: 5px;
+    border: 5px solid;
+    border-color: black;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.game-page footer button:hover {
+    background-color: #07B1A1;
+}
